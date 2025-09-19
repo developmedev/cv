@@ -1,0 +1,259 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terence Pillay – CV</title>
+<style>
+  :root{ --ink:#0f172a; --muted:#475569; --accent:#0284c7; --line:#e2e8f0; }
+  *{box-sizing:border-box}
+  body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif; color:var(--ink); margin:0; background:#fff; -webkit-font-smoothing:antialiased; line-height:1.45;}
+  .page{max-width: 900px; margin: 20px auto; padding: 28px 36px; border:1px solid var(--line); border-radius:12px;}
+  header{display:flex; gap:22px; align-items:center; border-bottom:2px solid var(--line); padding-bottom:14px; margin-bottom:16px;}
+  .avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--accent);color:var(--accent);font-weight:800}
+  h1{margin:0; font-size:28px; letter-spacing:.3px}
+  .subtitle{margin:2px 0 8px; color:var(--muted)}
+  .contact{display:flex; flex-wrap:wrap; gap:10px 18px; color:var(--muted); font-size:13px}
+  .contact a{color:var(--muted); text-decoration:none; border-bottom:1px dotted var(--muted)}
+  h2{font-size:16px; text-transform:uppercase; letter-spacing:1.8px; margin:20px 0 8px; color:#0b132b;}
+  h3{margin:0; font-size:15px}
+  .grid{display:grid; grid-template-columns:1.2fr .8fr; gap:26px}
+  .role{display:flex; justify-content:space-between; gap:12px; align-items:flex-start}
+  .meta{white-space:nowrap; color:var(--muted); font-size:13px}
+  .muted{color:var(--muted)}
+  ul{margin:8px 0 12px 20px; padding:0}
+  li{margin:4px 0}
+  .skills-cat{margin-bottom:10px}
+  .skills-cat h4{margin:6px 0 4px; font-size:14px}
+  .skills-cat .items{margin:0; list-style:none; padding:0}
+  .skills-cat .items li{display:inline}
+  .skills-cat .items li::after{content:" · "; color:#cbd5e1}
+  .skills-cat .items li:last-child::after{content:""}
+  .links-list {list-style: none; padding: 0; margin:8px 0 0 0; font-size:13px;}
+  .links-list li {margin:4px 0}
+  .links-list a {color:#0369a1; text-decoration:none; border-bottom:1px dotted #0369a1}
+  .edu-item{display:flex; justify-content:space-between; gap:12px}
+  .edu-item .where{color:var(--muted); font-size:13px}
+  .edu-item .when{white-space:nowrap; color:var(--muted); font-size:13px}
+  @media print{ .page{border:none; border-radius:0; padding:0; margin:0} a{color:inherit; text-decoration:none} }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="avatar">TP</div>
+      <div>
+        <h1>Terence Pillay</h1>
+        <p class="subtitle">Senior Software Developer · .NET • Cloud • Mobile • DevOps</p>
+        <div class="contact">
+          <span>📍 1 Bryne Rd, Townview, Kwadukuza 4449, South Africa</span>
+          <span>☎ 065 602 4976</span>
+          <span>✉ <a href="mailto:terencepillay26@yahoo.com">terencepillay26@yahoo.com</a></span>
+          <span>Nationality: South African</span>
+          <span>LinkedIn: <a href="https://za.linkedin.com/in/terence-pillay-10289968">terence-pillay-10289968</a></span>
+          <span>GitHub: <a href="https://github.com/terencenrth">terencenrth</a></span>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Senior full‑stack engineer with 10+ years building cloud‑ready products across .NET, web and mobile.
+        Specialises in ASP.NET Core APIs, microservices, SQL performance, and cross‑platform apps (.NET MAUI/Xamarin/React Native).
+        Deep DevOps and Kubernetes experience (Docker, Helm, MicroK8s/Talos, Rook‑Ceph, CloudNativePG, Velero) and identity stacks
+        (IdentityServer4, Keycloak, Authentik, OIDC). Delivers secure, testable solutions and leads teams through migrations,
+        CI/CD automation, and stakeholder‑friendly delivery.
+      </p>
+    </section>
+
+    <div class="grid">
+      <section>
+        <h2>Work History</h2>
+
+        <div class="role">
+          <div>
+            <h3>Senior Software Developer — Agile North</h3>
+            <div class="muted">Ballito, South Africa</div>
+          </div>
+          <div class="meta">03/2018 – Present</div>
+        </div>
+        <ul>
+          <li>Architected and delivered .NET web/mobile platforms; led legacy migrations to ASP.NET Core and cloud‑native patterns.</li>
+          <li>Optimised SQL Server/PostgreSQL (indexes, query tuning, PITR with CloudNativePG) to reduce latency and costs.</li>
+          <li>Built secure auth with IdentityServer4/OIDC and AWS Cognito; implemented RBAC and token flows in MAUI/mobile clients.</li>
+          <li>Automated CI/CD with Bitbucket Pipelines, GitHub Actions and Azure DevOps; Android signing & Play Store release flows.</li>
+          <li>Containerised services and ran K8s workloads (MicroK8s/Talos) with Helm; storage via Rook‑Ceph; backups using Velero.</li>
+          <li>Mentored devs, enforced testing (unit/Jest/xUnit) and coding standards; improved observability via AppCenter crash analytics.</li>
+        </ul>
+
+        <div class="role">
+          <div>
+            <h3>Integrations Developer — Isync Solutions</h3>
+            <div class="muted">Umhlanga, KwaZulu‑Natal</div>
+          </div>
+          <div class="meta">11/2017 – 03/2018</div>
+        </div>
+        <ul>
+          <li>Delivered secure integrations between Sync System and client platforms; owned component testing and defect resolution.</li>
+          <li>Drove Agile collaboration and researched new approaches to improve throughput and reliability.</li>
+        </ul>
+
+        <div class="role">
+          <div>
+            <h3>IT Developer — Telesacomms (PTY) LTD</h3>
+            <div class="muted">Musgrave, KwaZulu‑Natal</div>
+          </div>
+          <div class="meta">12/2015 – 11/2017</div>
+        </div>
+        <ul>
+          <li>Built internal/customer applications, collaborated on requirements, and shipped maintainable releases.</li>
+          <li>Improved performance and reliability through profiling, refactoring and test automation.</li>
+        </ul>
+
+        <h2>Education</h2>
+        <div class="edu-item">
+          <div>
+            <h3>Diploma of IT (Software Development)</h3>
+            <div class="where">Durban University of Technology, Durban, KwaZulu‑Natal</div>
+          </div>
+          <div class="when">01/2013 – 12/2015</div>
+        </div>
+        <div class="edu-item">
+          <div>
+            <h3>Higher National Diploma · IT</h3>
+            <div class="where">Glenhills Secondary, KwaDukuza, KwaZulu‑Natal</div>
+          </div>
+          <div class="when">12/2012</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Skills (updated)</h2>
+
+        <div class="skills-cat">
+          <h4>Languages</h4>
+          <ul class="items">
+            <li>C#</li><li>TypeScript/JavaScript</li><li>Java</li><li>Python</li><li>PHP</li><li>SQL/T‑SQL</li><li>PL/pgSQL</li>
+            <li>Bash</li><li>PowerShell</li><li>MQL5</li><li>HTML</li><li>CSS</li><li>JSON</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>.NET & Backend</h4>
+          <ul class="items">
+            <li>.NET 8/6 & .NET Framework</li><li>ASP.NET Core</li><li>Web API (REST)</li><li>MVC</li><li>Minimal APIs</li>
+            <li>Windows Services</li><li>WPF</li><li>UWP</li>
+            <li>Entity Framework (Core & EF6)</li><li>CQRS</li><li>Microservices</li>
+            <li>PDF/Docs: Syncfusion PDF, MigraDoc, WKHTMLTOPDF, PuppeteerSharp</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>Identity & Security</h4>
+          <ul class="items">
+            <li>IdentityServer4 (multitenant)</li><li>OAuth2/OIDC</li><li>OidcClient</li><li>Keycloak</li><li>Authentik</li>
+            <li>AWS Cognito</li><li>JWT/RBAC</li><li>TLS/Ingress hardening</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>Frontend</h4>
+          <ul class="items">
+            <li>Angular (+ Material & CLI)</li><li>React</li><li>React Native (Expo)</li><li>Vue.js</li><li>Aurelia</li>
+            <li>SAPUI5/Fiori</li><li>jQuery</li><li>Bootstrap</li><li>Ajax</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>Mobile & Desktop</h4>
+          <ul class="items">
+            <li>.NET MAUI</li><li>Xamarin.Forms</li><li>Android Studio</li>
+            <li>Expo/EAS Build</li><li>AppCenter (distribution & crash analytics)</li>
+            <li>Play Store policy & release management (Android 15 readiness)</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>APIs & Integrations</h4>
+          <ul class="items">
+            <li>RESTful APIs</li><li>tRPC</li><li>Prisma ORM</li><li>SAP integrations</li><li>Webhooks</li><li>Postman</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>Data & Databases</h4>
+          <ul class="items">
+            <li>SQL Server</li><li>PostgreSQL (CloudNativePG, PITR)</li><li>SQLite</li>
+            <li>SSIS/ETL</li><li>Query tuning & indexing</li><li>SQL Profiler</li><li>Data modelling</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>Cloud, Containers & Kubernetes</h4>
+          <ul class="items">
+            <li>Azure (Portal, DevOps)</li><li>AWS (Lambda, Cognito, S3)</li><li>S3‑compatible (Linode)</li>
+            <li>Docker & Compose</li><li>Kubernetes (MicroK8s, Talos)</li><li>Helm</li>
+            <li>Rook‑Ceph/Ceph, CloudNativePG, MetalLB, Cilium, NGINX Ingress</li>
+            <li>Velero backups (Kopia/Restic)</li><li>GitOps‑ready Helm workflows</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>CI/CD & Automation</h4>
+          <ul class="items">
+            <li>Bitbucket Pipelines</li><li>GitHub Actions</li><li>Azure DevOps</li><li>TeamCity</li>
+            <li>AWX/Ansible</li><li>Bash/PowerShell scripting</li>
+            <li>Android signing/keystore automation (base64)</li>
+            <li>Semantic versioning, environment promotion, release pipelines</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>AI & Developer Tooling</h4>
+          <ul class="items">
+            <li>OpenAI API (function calling)</li><li>Semantic Kernel</li><li>Custom toolchain/pipeline design</li>
+            <li>NCalc/NCalcAsync</li><li>VSIX extension tooling for code analysis</li>
+          </ul>
+        </div>
+
+        <div class="skills-cat">
+          <h4>Ecosystem & Platforms</h4>
+          <ul class="items">
+            <li>Visual Studio, VS Code, ReSharper, Postman</li>
+            <li>Git (GitHub/Bitbucket), code review & branching strategies</li>
+            <li>Jira & Scrum/Agile delivery</li>
+            <li>App stores: Google Play Console, Apple App Store Connect, Huawei AppGallery</li>
+            <li>Wix Velo, WordPress (Avada)</li>
+            <li>Monorepo: Turborepo, Node.js, pnpm/yarn</li>
+          </ul>
+        </div>
+
+        <h2>Languages</h2>
+        <p>English — Native</p>
+
+        <h2>Websites & Profiles</h2>
+        <ul class="links-list">
+          <li><a href="https://za.linkedin.com/in/terence-pillay-10289968">LinkedIn</a></li>
+          <li><a href="https://github.com/terencenrth">GitHub: terencenrth</a></li>
+          <li><a href="http://forums.asp.net/t/2056940.aspx?cascading+dropdowns+alternate+method+for+beginners">ASP.NET Forum: Cascading Dropdowns</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <section>
+      <h2>Community & Projects</h2>
+      <ul>
+        <li>YouTube technical content creator.</li>
+        <li>Apps: Bible Quotes; Unbelievable Facts; URL to PDF — Google Play / Microsoft Store.</li>
+        <li>Forum articles: MVC 5 passing several models; cascading dropdown techniques.</li>
+      </ul>
+    </section>
+
+    <section class="muted" style="font-size:12px">
+      <em>References available on request. CV updated 2025.</em>
+    </section>
+  </div>
+</body>
+</html>
