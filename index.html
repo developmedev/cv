@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,58 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terence Pillay – CV</title>
 <style>
-  :root{ --ink:#0f172a; --muted:#475569; --accent:#0284c7; --line:#e2e8f0; }
+  :root{ --ink:#0f172a; --muted:#475569; --accent:#0284c7; --line:#e2e8f0; --bg:#ffffff; }
   *{box-sizing:border-box}
-  body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif; color:var(--ink); margin:0; background:#fff; -webkit-font-smoothing:antialiased; line-height:1.45;}
-  .page{max-width: 900px; margin: 20px auto; padding: 28px 36px; border:1px solid var(--line); border-radius:12px;}
-  header{display:flex; gap:22px; align-items:center; border-bottom:2px solid var(--line); padding-bottom:14px; margin-bottom:16px;}
-  .avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--accent);color:var(--accent);font-weight:800}
-  h1{margin:0; font-size:28px; letter-spacing:.3px}
-  .subtitle{margin:2px 0 8px; color:var(--muted)}
-  .contact{display:flex; flex-wrap:wrap; gap:10px 18px; color:var(--muted); font-size:13px}
+  html,body{margin:0; padding:0; background:var(--bg); color:var(--ink);}
+  body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif; -webkit-font-smoothing:antialiased; line-height:1.55;}
+  .page{max-width:920px; margin:0 auto; padding:16px;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; margin:12px 0;}
+  header.card{display:flex; gap:14px; align-items:center; position:sticky; top:0; backdrop-filter:saturate(1.2) blur(6px); z-index:10}
+  .avatar{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--accent);color:var(--accent);font-weight:800}
+  h1{font-size:22px; margin:0}
+  .subtitle{margin:2px 0 8px; color:var(--muted); font-size:13px}
+  .contact{display:flex; flex-wrap:wrap; gap:8px 14px; color:var(--muted); font-size:13px; line-height:1.6}
   .contact a{color:var(--muted); text-decoration:none; border-bottom:1px dotted var(--muted)}
-  h2{font-size:16px; text-transform:uppercase; letter-spacing:1.8px; margin:20px 0 8px; color:#0b132b;}
-  h3{margin:0; font-size:15px}
-  .grid{display:grid; grid-template-columns:1.2fr .8fr; gap:26px}
-  .role{display:flex; justify-content:space-between; gap:12px; align-items:flex-start}
-  .meta{white-space:nowrap; color:var(--muted); font-size:13px}
+  h2{font-size:14px; text-transform:uppercase; letter-spacing:1.4px; margin:12px 0 8px; color:#0b132b}
+  h3{margin:0; font-size:14px}
   .muted{color:var(--muted)}
-  ul{margin:8px 0 12px 20px; padding:0}
-  li{margin:4px 0}
+  .meta{white-space:nowrap; color:var(--muted); font-size:12px}
+  ul{margin:8px 0 10px 18px; padding:0}
+  li{margin:6px 0}
   .skills-cat{margin-bottom:10px}
-  .skills-cat h4{margin:6px 0 4px; font-size:14px}
-  .skills-cat .items{margin:0; list-style:none; padding:0}
-  .skills-cat .items li{display:inline}
-  .skills-cat .items li::after{content:" · "; color:#cbd5e1}
-  .skills-cat .items li:last-child::after{content:""}
-  .links-list {list-style: none; padding: 0; margin:8px 0 0 0; font-size:13px;}
-  .links-list li {margin:4px 0}
-  .links-list a {color:#0369a1; text-decoration:none; border-bottom:1px dotted #0369a1}
-  .edu-item{display:flex; justify-content:space-between; gap:12px}
-  .edu-item .where{color:var(--muted); font-size:13px}
-  .edu-item .when{white-space:nowrap; color:var(--muted); font-size:13px}
-  @media print{ .page{border:none; border-radius:0; padding:0; margin:0} a{color:inherit; text-decoration:none} }
+  .skills-cat h4{margin:8px 0 6px; font-size:13px; color:#0b132b}
+  .pills{display:flex; flex-wrap:wrap; gap:8px}
+  .pill{padding:6px 10px; border:1px solid var(--line); border-radius:999px; font-size:12px; white-space:nowrap}
+  @media (min-width: 820px){
+    .page{padding:24px}
+    header.card{position:static; border-radius:14px; padding:22px}
+    h1{font-size:28px}
+    .subtitle{font-size:14px}
+    .grid{display:grid; grid-template-columns:1.25fr .85fr; gap:18px}
+    .stack > .card{margin:0}
+  }
+  @media print{
+    .page{padding:0}
+    .card{border:none; border-radius:0; page-break-inside:avoid}
+    header.card{position:static}
+    a{color:inherit; text-decoration:none}
+  }
 </style>
 </head>
 <body>
   <div class="page">
-    <header>
+    <header class="card">
       <div class="avatar">TP</div>
       <div>
         <h1>Terence Pillay</h1>
         <p class="subtitle">Senior Software Developer · .NET • Cloud • Mobile • DevOps</p>
         <div class="contact">
-          <span>📍 1 Bryne Rd, Townview, Kwadukuza 4449, South Africa</span>
+          <span>📍 Kwadukuza, South Africa</span>
           <span>☎ 065 602 4976</span>
           <span>✉ <a href="mailto:terencepillay26@yahoo.com">terencepillay26@yahoo.com</a></span>
-          <span>Nationality: South African</span>
           <span>LinkedIn: <a href="https://za.linkedin.com/in/terence-pillay-10289968">terence-pillay-10289968</a></span>
           <span>GitHub: <a href="https://github.com/terencenrth">terencenrth</a></span>
         </div>
       </div>
     </header>
 
-    <section>
+    <section class="card">
       <h2>Professional Summary</h2>
       <p>
         Senior full‑stack engineer with 10+ years building cloud‑ready products across .NET, web and mobile.
@@ -68,11 +71,11 @@
       </p>
     </section>
 
-    <div class="grid">
-      <section>
+    <div class="grid stack">
+      <section class="card">
         <h2>Work History</h2>
 
-        <div class="role">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px">
           <div>
             <h3>Senior Software Developer — Agile North</h3>
             <div class="muted">Ballito, South Africa</div>
@@ -88,7 +91,7 @@
           <li>Mentored devs, enforced testing (unit/Jest/xUnit) and coding standards; improved observability via AppCenter crash analytics.</li>
         </ul>
 
-        <div class="role">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px">
           <div>
             <h3>Integrations Developer — Isync Solutions</h3>
             <div class="muted">Umhlanga, KwaZulu‑Natal</div>
@@ -100,7 +103,7 @@
           <li>Drove Agile collaboration and researched new approaches to improve throughput and reliability.</li>
         </ul>
 
-        <div class="role">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px">
           <div>
             <h3>IT Developer — Telesacomms (PTY) LTD</h3>
             <div class="muted">Musgrave, KwaZulu‑Natal</div>
@@ -113,121 +116,125 @@
         </ul>
 
         <h2>Education</h2>
-        <div class="edu-item">
+        <div style="display:flex; justify-content:space-between; gap:12px">
           <div>
-            <h3>Diploma of IT (Software Development)</h3>
-            <div class="where">Durban University of Technology, Durban, KwaZulu‑Natal</div>
+            <strong>Diploma of IT (Software Development)</strong><br>
+            <span class="muted">Durban University of Technology, Durban, KwaZulu‑Natal</span>
           </div>
-          <div class="when">01/2013 – 12/2015</div>
+          <div class="meta">01/2013 – 12/2015</div>
         </div>
-        <div class="edu-item">
+        <div style="height:8px"></div>
+        <div style="display:flex; justify-content:space-between; gap:12px">
           <div>
-            <h3>Higher National Diploma · IT</h3>
-            <div class="where">Glenhills Secondary, KwaDukuza, KwaZulu‑Natal</div>
+            <strong>Higher National Diploma · IT</strong><br>
+            <span class="muted">Glenhills Secondary, KwaDukuza, KwaZulu‑Natal</span>
           </div>
-          <div class="when">12/2012</div>
+          <div class="meta">12/2012</div>
         </div>
       </section>
 
-      <section>
+      <section class="card">
         <h2>Skills (updated)</h2>
 
         <div class="skills-cat">
           <h4>Languages</h4>
-          <ul class="items">
-            <li>C#</li><li>TypeScript/JavaScript</li><li>Java</li><li>Python</li><li>PHP</li><li>SQL/T‑SQL</li><li>PL/pgSQL</li>
-            <li>Bash</li><li>PowerShell</li><li>MQL5</li><li>HTML</li><li>CSS</li><li>JSON</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">C#</span><span class="pill">TypeScript/JavaScript</span><span class="pill">Java</span>
+            <span class="pill">Python</span><span class="pill">PHP</span><span class="pill">SQL/T‑SQL</span>
+            <span class="pill">PL/pgSQL</span><span class="pill">Bash</span><span class="pill">PowerShell</span>
+            <span class="pill">MQL5</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JSON</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>.NET & Backend</h4>
-          <ul class="items">
-            <li>.NET 8/6 & .NET Framework</li><li>ASP.NET Core</li><li>Web API (REST)</li><li>MVC</li><li>Minimal APIs</li>
-            <li>Windows Services</li><li>WPF</li><li>UWP</li>
-            <li>Entity Framework (Core & EF6)</li><li>CQRS</li><li>Microservices</li>
-            <li>PDF/Docs: Syncfusion PDF, MigraDoc, WKHTMLTOPDF, PuppeteerSharp</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">.NET 8/6 & Framework</span><span class="pill">ASP.NET Core</span><span class="pill">Web API (REST)</span>
+            <span class="pill">MVC</span><span class="pill">Minimal APIs</span><span class="pill">Windows Services</span>
+            <span class="pill">WPF</span><span class="pill">UWP</span><span class="pill">Entity Framework Core/EF6</span>
+            <span class="pill">CQRS</span><span class="pill">Microservices</span>
+            <span class="pill">Syncfusion PDF</span><span class="pill">MigraDoc</span><span class="pill">WKHTMLTOPDF</span><span class="pill">PuppeteerSharp</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>Identity & Security</h4>
-          <ul class="items">
-            <li>IdentityServer4 (multitenant)</li><li>OAuth2/OIDC</li><li>OidcClient</li><li>Keycloak</li><li>Authentik</li>
-            <li>AWS Cognito</li><li>JWT/RBAC</li><li>TLS/Ingress hardening</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">IdentityServer4</span><span class="pill">OAuth2/OIDC</span><span class="pill">OidcClient</span>
+            <span class="pill">Keycloak</span><span class="pill">Authentik</span><span class="pill">AWS Cognito</span>
+            <span class="pill">JWT/RBAC</span><span class="pill">TLS/Ingress hardening</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>Frontend</h4>
-          <ul class="items">
-            <li>Angular (+ Material & CLI)</li><li>React</li><li>React Native (Expo)</li><li>Vue.js</li><li>Aurelia</li>
-            <li>SAPUI5/Fiori</li><li>jQuery</li><li>Bootstrap</li><li>Ajax</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">Angular + Material/CLI</span><span class="pill">React</span><span class="pill">React Native (Expo)</span>
+            <span class="pill">Vue.js</span><span class="pill">Aurelia</span><span class="pill">SAPUI5</span>
+            <span class="pill">jQuery</span><span class="pill">Bootstrap</span><span class="pill">Ajax</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>Mobile & Desktop</h4>
-          <ul class="items">
-            <li>.NET MAUI</li><li>Xamarin.Forms</li><li>Android Studio</li>
-            <li>Expo/EAS Build</li><li>AppCenter (distribution & crash analytics)</li>
-            <li>Play Store policy & release management (Android 15 readiness)</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">.NET MAUI</span><span class="pill">Xamarin.Forms</span><span class="pill">Android Studio</span>
+            <span class="pill">Expo/EAS Build</span><span class="pill">AppCenter</span><span class="pill">Play Store (Android 15)</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>APIs & Integrations</h4>
-          <ul class="items">
-            <li>RESTful APIs</li><li>tRPC</li><li>Prisma ORM</li><li>SAP integrations</li><li>Webhooks</li><li>Postman</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">RESTful APIs</span><span class="pill">tRPC</span><span class="pill">Prisma</span>
+            <span class="pill">SAP integrations</span><span class="pill">Webhooks</span><span class="pill">Postman</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>Data & Databases</h4>
-          <ul class="items">
-            <li>SQL Server</li><li>PostgreSQL (CloudNativePG, PITR)</li><li>SQLite</li>
-            <li>SSIS/ETL</li><li>Query tuning & indexing</li><li>SQL Profiler</li><li>Data modelling</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">SQL Server</span><span class="pill">PostgreSQL (CloudNativePG/PITR)</span><span class="pill">SQLite</span>
+            <span class="pill">SSIS/ETL</span><span class="pill">Query tuning</span><span class="pill">SQL Profiler</span><span class="pill">Data modelling</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>Cloud, Containers & Kubernetes</h4>
-          <ul class="items">
-            <li>Azure (Portal, DevOps)</li><li>AWS (Lambda, Cognito, S3)</li><li>S3‑compatible (Linode)</li>
-            <li>Docker & Compose</li><li>Kubernetes (MicroK8s, Talos)</li><li>Helm</li>
-            <li>Rook‑Ceph/Ceph, CloudNativePG, MetalLB, Cilium, NGINX Ingress</li>
-            <li>Velero backups (Kopia/Restic)</li><li>GitOps‑ready Helm workflows</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">S3‑compatible (Linode)</span>
+            <span class="pill">Docker & Compose</span><span class="pill">Kubernetes (MicroK8s/Talos)</span><span class="pill">Helm</span>
+            <span class="pill">Rook‑Ceph</span><span class="pill">CloudNativePG</span><span class="pill">MetalLB</span>
+            <span class="pill">Cilium</span><span class="pill">NGINX Ingress</span><span class="pill">Velero (Kopia/Restic)</span>
+            <span class="pill">GitOps‑ready Helm workflows</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>CI/CD & Automation</h4>
-          <ul class="items">
-            <li>Bitbucket Pipelines</li><li>GitHub Actions</li><li>Azure DevOps</li><li>TeamCity</li>
-            <li>AWX/Ansible</li><li>Bash/PowerShell scripting</li>
-            <li>Android signing/keystore automation (base64)</li>
-            <li>Semantic versioning, environment promotion, release pipelines</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">Bitbucket Pipelines</span><span class="pill">GitHub Actions</span><span class="pill">Azure DevOps</span>
+            <span class="pill">TeamCity</span><span class="pill">AWX/Ansible</span><span class="pill">Bash/PowerShell</span>
+            <span class="pill">Android signing (keystore/base64)</span><span class="pill">Release pipelines</span>
+          </div>
         </div>
 
         <div class="skills-cat">
-          <h4>AI & Developer Tooling</h4>
-          <ul class="items">
-            <li>OpenAI API (function calling)</li><li>Semantic Kernel</li><li>Custom toolchain/pipeline design</li>
-            <li>NCalc/NCalcAsync</li><li>VSIX extension tooling for code analysis</li>
-          </ul>
+          <h4>AI & Dev Tooling</h4>
+          <div class="pills">
+            <span class="pill">OpenAI API</span><span class="pill">Semantic Kernel</span><span class="pill">NCalc/NCalcAsync</span>
+            <span class="pill">VSIX code analysis</span><span class="pill">Custom toolchains</span>
+          </div>
         </div>
 
         <div class="skills-cat">
           <h4>Ecosystem & Platforms</h4>
-          <ul class="items">
-            <li>Visual Studio, VS Code, ReSharper, Postman</li>
-            <li>Git (GitHub/Bitbucket), code review & branching strategies</li>
-            <li>Jira & Scrum/Agile delivery</li>
-            <li>App stores: Google Play Console, Apple App Store Connect, Huawei AppGallery</li>
-            <li>Wix Velo, WordPress (Avada)</li>
-            <li>Monorepo: Turborepo, Node.js, pnpm/yarn</li>
-          </ul>
+          <div class="pills">
+            <span class="pill">Visual Studio</span><span class="pill">VS Code</span><span class="pill">ReSharper</span><span class="pill">Postman</span><span class="pill">Android Studio</span>
+            <span class="pill">Git (GitHub/Bitbucket)</span><span class="pill">Jira</span><span class="pill">Scrum/Agile</span>
+            <span class="pill">Google Play Console</span><span class="pill">App Store Connect</span><span class="pill">Huawei AppGallery</span>
+            <span class="pill">Wix Velo</span><span class="pill">WordPress (Avada)</span><span class="pill">Turborepo</span>
+          </div>
         </div>
 
         <h2>Languages</h2>
@@ -242,17 +249,14 @@
       </section>
     </div>
 
-    <section>
+    <section class="card">
       <h2>Community & Projects</h2>
       <ul>
         <li>YouTube technical content creator.</li>
         <li>Apps: Bible Quotes; Unbelievable Facts; URL to PDF — Google Play / Microsoft Store.</li>
         <li>Forum articles: MVC 5 passing several models; cascading dropdown techniques.</li>
       </ul>
-    </section>
-
-    <section class="muted" style="font-size:12px">
-      <em>References available on request. CV updated 2025.</em>
+      <p class="small muted">References available on request · Updated 2025</p>
     </section>
   </div>
 </body>
