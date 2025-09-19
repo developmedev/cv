@@ -1,263 +1,248 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terence Pillay – CV</title>
-<style>
-  :root{ --ink:#0f172a; --muted:#475569; --accent:#0284c7; --line:#e2e8f0; --bg:#ffffff; }
-  *{box-sizing:border-box}
-  html,body{margin:0; padding:0; background:var(--bg); color:var(--ink);}
-  body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif; -webkit-font-smoothing:antialiased; line-height:1.55;}
-  .page{max-width:920px; margin:0 auto; padding:16px;}
-  .card{background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px; margin:12px 0;}
-  header.card{display:flex; gap:14px; align-items:center; position:sticky; top:0; backdrop-filter:saturate(1.2) blur(6px); z-index:10}
-  .avatar{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--accent);color:var(--accent);font-weight:800}
-  h1{font-size:22px; margin:0}
-  .subtitle{margin:2px 0 8px; color:var(--muted); font-size:13px}
-  .contact{display:flex; flex-wrap:wrap; gap:8px 14px; color:var(--muted); font-size:13px; line-height:1.6}
-  .contact a{color:var(--muted); text-decoration:none; border-bottom:1px dotted var(--muted)}
-  h2{font-size:14px; text-transform:uppercase; letter-spacing:1.4px; margin:12px 0 8px; color:#0b132b}
-  h3{margin:0; font-size:14px}
-  .muted{color:var(--muted)}
-  .meta{white-space:nowrap; color:var(--muted); font-size:12px}
-  ul{margin:8px 0 10px 18px; padding:0}
-  li{margin:6px 0}
-  .skills-cat{margin-bottom:10px}
-  .skills-cat h4{margin:8px 0 6px; font-size:13px; color:#0b132b}
-  .pills{display:flex; flex-wrap:wrap; gap:8px}
-  .pill{padding:6px 10px; border:1px solid var(--line); border-radius:999px; font-size:12px; white-space:nowrap}
-  @media (min-width: 820px){
-    .page{padding:24px}
-    header.card{position:static; border-radius:14px; padding:22px}
-    h1{font-size:28px}
-    .subtitle{font-size:14px}
-    .grid{display:grid; grid-template-columns:1.25fr .85fr; gap:18px}
-    .stack > .card{margin:0}
-  }
-  @media print{
-    .page{padding:0}
-    .card{border:none; border-radius:0; page-break-inside:avoid}
-    header.card{position:static}
-    a{color:inherit; text-decoration:none}
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terence Pillay – CV</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .avatar { width:64px; height:64px; border-radius:50%; border:2px solid var(--bs-info); display:grid; place-items:center; color:var(--bs-info); font-weight:800; }
+    .badge-skill { font-weight:500; margin:.2rem .25rem; }
+    .section-title { letter-spacing:.12em; }
+    .muted { color: var(--bs-secondary-color); }
+    @media print {
+      .no-print { display:none !important; }
+      a { color: inherit; text-decoration: none; }
+      .card { border: none; }
+      .container { max-width: 100% !important; }
+    }
+  </style>
 </head>
-<body>
-  <div class="page">
-    <header class="card">
-      <div class="avatar">TP</div>
-      <div>
-        <h1>Terence Pillay</h1>
-        <p class="subtitle">Senior Software Developer · .NET • Cloud • Mobile • DevOps</p>
-        <div class="contact">
-          <span>📍 Kwadukuza, South Africa</span>
-          <span>☎ 065 602 4976</span>
-          <span>✉ <a href="mailto:terencepillay26@yahoo.com">terencepillay26@yahoo.com</a></span>
-          <span>LinkedIn: <a href="https://za.linkedin.com/in/terence-pillay-10289968">terence-pillay-10289968</a></span>
-          <span>GitHub: <a href="https://github.com/terencenrth">terencenrth</a></span>
+<body class="bg-body-tertiary">
+  <div class="container py-3 py-md-4">
+    <!-- Header -->
+    <header class="card shadow-sm sticky-top no-print" style="top:.5rem;">
+      <div class="card-body d-flex align-items-center gap-3">
+        <div class="avatar">TP</div>
+        <div class="flex-grow-1">
+          <h1 class="h3 mb-1">Terence Pillay</h1>
+          <p class="text-secondary mb-2">Senior Software Developer · .NET • Cloud • Mobile • DevOps</p>
+          <div class="d-flex flex-wrap gap-2 small text-secondary">
+            <span>📍 Kwadukuza, South Africa</span>
+            <span>•</span>
+            <span>☎ 065 602 4976</span>
+            <span>•</span>
+            <a class="link-secondary" href="mailto:terencepillay26@yahoo.com">terencepillay26@yahoo.com</a>
+            <span>•</span>
+            <a class="link-secondary" href="https://za.linkedin.com/in/terence-pillay-10289968">LinkedIn</a>
+            <span>•</span>
+            <a class="link-secondary" href="https://github.com/terencenrth">GitHub</a>
+          </div>
         </div>
       </div>
     </header>
 
-    <section class="card">
-      <h2>Professional Summary</h2>
-      <p>
-        Senior full‑stack engineer with 10+ years building cloud‑ready products across .NET, web and mobile.
-        Specialises in ASP.NET Core APIs, microservices, SQL performance, and cross‑platform apps (.NET MAUI/Xamarin/React Native).
-        Deep DevOps and Kubernetes experience (Docker, Helm, MicroK8s/Talos, Rook‑Ceph, CloudNativePG, Velero) and identity stacks
-        (IdentityServer4, Keycloak, Authentik, OIDC). Delivers secure, testable solutions and leads teams through migrations,
-        CI/CD automation, and stakeholder‑friendly delivery.
-      </p>
+    <!-- Summary -->
+    <section class="card shadow-sm my-3">
+      <div class="card-body">
+        <h2 class="h6 text-uppercase text-body-secondary section-title mb-2">Professional Summary</h2>
+        <p class="mb-0">
+          Senior full‑stack engineer with 10+ years building cloud‑ready products across .NET, web and mobile.
+          Specialises in ASP.NET Core APIs, microservices, SQL performance, and cross‑platform apps (.NET MAUI/Xamarin/React Native).
+          Deep DevOps and Kubernetes experience (Docker, Helm, MicroK8s/Talos, Rook‑Ceph, CloudNativePG, Velero) and identity stacks
+          (IdentityServer4, Keycloak, Authentik, OIDC). Delivers secure, testable solutions and leads teams through migrations,
+          CI/CD automation, and stakeholder‑friendly delivery.
+        </p>
+      </div>
     </section>
 
-    <div class="grid stack">
-      <section class="card">
-        <h2>Work History</h2>
+    <div class="row g-3">
+      <!-- Work History / Education -->
+      <div class="col-12 col-lg-7">
+        <section class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="h6 text-uppercase text-body-secondary section-title mb-3">Work History</h2>
 
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px">
-          <div>
-            <h3>Senior Software Developer — Agile North</h3>
-            <div class="muted">Ballito, South Africa</div>
+            <div class="d-flex justify-content-between align-items-start">
+              <div>
+                <h3 class="h6 mb-0">Senior Software Developer — Agile North</h3>
+                <div class="small text-secondary">Ballito, South Africa</div>
+              </div>
+              <div class="small text-secondary">03/2018 – Present</div>
+            </div>
+            <ul class="mt-2">
+              <li>Architected and delivered .NET web/mobile platforms; led legacy migrations to ASP.NET Core and cloud‑native patterns.</li>
+              <li>Optimised SQL Server/PostgreSQL (indexes, query tuning, PITR with CloudNativePG) to reduce latency and costs.</li>
+              <li>Built secure auth with IdentityServer4/OIDC and AWS Cognito; implemented RBAC and token flows in MAUI/mobile clients.</li>
+              <li>Automated CI/CD with Bitbucket Pipelines, GitHub Actions and Azure DevOps; Android signing & Play Store release flows.</li>
+              <li>Containerised services and ran K8s workloads (MicroK8s/Talos) with Helm; storage via Rook‑Ceph; backups using Velero.</li>
+              <li>Mentored devs, enforced testing (unit/Jest/xUnit) and coding standards; improved observability via AppCenter crash analytics.</li>
+            </ul>
+
+            <div class="d-flex justify-content-between align-items-start mt-3">
+              <div>
+                <h3 class="h6 mb-0">Integrations Developer — Isync Solutions</h3>
+                <div class="small text-secondary">Umhlanga, KwaZulu‑Natal</div>
+              </div>
+              <div class="small text-secondary">11/2017 – 03/2018</div>
+            </div>
+            <ul class="mt-2">
+              <li>Delivered secure integrations between Sync System and client platforms; owned component testing and defect resolution.</li>
+              <li>Drove Agile collaboration and researched new approaches to improve throughput and reliability.</li>
+            </ul>
+
+            <div class="d-flex justify-content-between align-items-start mt-3">
+              <div>
+                <h3 class="h6 mb-0">IT Developer — Telesacomms (PTY) LTD</h3>
+                <div class="small text-secondary">Musgrave, KwaZulu‑Natal</div>
+              </div>
+              <div class="small text-secondary">12/2015 – 11/2017</div>
+            </div>
+            <ul class="mt-2">
+              <li>Built internal/customer applications, collaborated on requirements, and shipped maintainable releases.</li>
+              <li>Improved performance and reliability through profiling, refactoring and test automation.</li>
+            </ul>
+
+            <h2 class="h6 text-uppercase text-body-secondary section-title mt-4 mb-3">Education</h2>
+
+            <div class="d-flex justify-content-between">
+              <div>
+                <strong>Diploma of IT (Software Development)</strong><br>
+                <span class="small text-secondary">Durban University of Technology, Durban, KwaZulu‑Natal</span>
+              </div>
+              <div class="small text-secondary">01/2013 – 12/2015</div>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <div>
+                <strong>Higher National Diploma · IT</strong><br>
+                <span class="small text-secondary">Glenhills Secondary, KwaDukuza, KwaZulu‑Natal</span>
+              </div>
+              <div class="small text-secondary">12/2012</div>
+            </div>
           </div>
-          <div class="meta">03/2018 – Present</div>
-        </div>
-        <ul>
-          <li>Architected and delivered .NET web/mobile platforms; led legacy migrations to ASP.NET Core and cloud‑native patterns.</li>
-          <li>Optimised SQL Server/PostgreSQL (indexes, query tuning, PITR with CloudNativePG) to reduce latency and costs.</li>
-          <li>Built secure auth with IdentityServer4/OIDC and AWS Cognito; implemented RBAC and token flows in MAUI/mobile clients.</li>
-          <li>Automated CI/CD with Bitbucket Pipelines, GitHub Actions and Azure DevOps; Android signing & Play Store release flows.</li>
-          <li>Containerised services and ran K8s workloads (MicroK8s/Talos) with Helm; storage via Rook‑Ceph; backups using Velero.</li>
-          <li>Mentored devs, enforced testing (unit/Jest/xUnit) and coding standards; improved observability via AppCenter crash analytics.</li>
-        </ul>
+        </section>
+      </div>
 
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px">
-          <div>
-            <h3>Integrations Developer — Isync Solutions</h3>
-            <div class="muted">Umhlanga, KwaZulu‑Natal</div>
+      <!-- Skills / Links -->
+      <div class="col-12 col-lg-5">
+        <section class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h2 class="h6 text-uppercase text-body-secondary section-title mb-2">Skills (updated)</h2>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">Languages</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">C#</span><span class="badge text-bg-light border badge-skill">TypeScript/JavaScript</span><span class="badge text-bg-light border badge-skill">Java</span><span class="badge text-bg-light border badge-skill">Python</span><span class="badge text-bg-light border badge-skill">PHP</span><span class="badge text-bg-light border badge-skill">SQL/T‑SQL</span><span class="badge text-bg-light border badge-skill">PL/pgSQL</span><span class="badge text-bg-light border badge-skill">Bash</span><span class="badge text-bg-light border badge-skill">PowerShell</span><span class="badge text-bg-light border badge-skill">MQL5</span><span class="badge text-bg-light border badge-skill">HTML</span><span class="badge text-bg-light border badge-skill">CSS</span><span class="badge text-bg-light border badge-skill">JSON</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">.NET & Backend</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">.NET 8/6 & Framework</span><span class="badge text-bg-light border badge-skill">ASP.NET Core</span><span class="badge text-bg-light border badge-skill">Web API (REST)</span><span class="badge text-bg-light border badge-skill">MVC</span><span class="badge text-bg-light border badge-skill">Minimal APIs</span><span class="badge text-bg-light border badge-skill">Windows Services</span><span class="badge text-bg-light border badge-skill">WPF</span><span class="badge text-bg-light border badge-skill">UWP</span><span class="badge text-bg-light border badge-skill">Entity Framework Core/EF6</span><span class="badge text-bg-light border badge-skill">CQRS</span><span class="badge text-bg-light border badge-skill">Microservices</span><span class="badge text-bg-light border badge-skill">Syncfusion PDF</span><span class="badge text-bg-light border badge-skill">MigraDoc</span><span class="badge text-bg-light border badge-skill">WKHTMLTOPDF</span><span class="badge text-bg-light border badge-skill">PuppeteerSharp</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">Identity & Security</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">IdentityServer4</span><span class="badge text-bg-light border badge-skill">OAuth2/OIDC</span><span class="badge text-bg-light border badge-skill">OidcClient</span><span class="badge text-bg-light border badge-skill">Keycloak</span><span class="badge text-bg-light border badge-skill">Authentik</span><span class="badge text-bg-light border badge-skill">AWS Cognito</span><span class="badge text-bg-light border badge-skill">JWT/RBAC</span><span class="badge text-bg-light border badge-skill">TLS/Ingress hardening</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">Frontend</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">Angular + Material/CLI</span><span class="badge text-bg-light border badge-skill">React</span><span class="badge text-bg-light border badge-skill">React Native (Expo)</span><span class="badge text-bg-light border badge-skill">Vue.js</span><span class="badge text-bg-light border badge-skill">Aurelia</span><span class="badge text-bg-light border badge-skill">SAPUI5</span><span class="badge text-bg-light border badge-skill">jQuery</span><span class="badge text-bg-light border badge-skill">Bootstrap</span><span class="badge text-bg-light border badge-skill">Ajax</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">Mobile & Desktop</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">.NET MAUI</span><span class="badge text-bg-light border badge-skill">Xamarin.Forms</span><span class="badge text-bg-light border badge-skill">Android Studio</span><span class="badge text-bg-light border badge-skill">Expo/EAS Build</span><span class="badge text-bg-light border badge-skill">AppCenter</span><span class="badge text-bg-light border badge-skill">Play Store (Android 15)</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">APIs & Integrations</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">RESTful APIs</span><span class="badge text-bg-light border badge-skill">tRPC</span><span class="badge text-bg-light border badge-skill">Prisma</span><span class="badge text-bg-light border badge-skill">SAP integrations</span><span class="badge text-bg-light border badge-skill">Webhooks</span><span class="badge text-bg-light border badge-skill">Postman</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">Data & Databases</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">SQL Server</span><span class="badge text-bg-light border badge-skill">PostgreSQL (CloudNativePG/PITR)</span><span class="badge text-bg-light border badge-skill">SQLite</span><span class="badge text-bg-light border badge-skill">SSIS/ETL</span><span class="badge text-bg-light border badge-skill">Query tuning</span><span class="badge text-bg-light border badge-skill">SQL Profiler</span><span class="badge text-bg-light border badge-skill">Data modelling</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">Cloud, Containers & Kubernetes</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">Azure</span><span class="badge text-bg-light border badge-skill">AWS</span><span class="badge text-bg-light border badge-skill">S3‑compatible (Linode)</span><span class="badge text-bg-light border badge-skill">Docker & Compose</span><span class="badge text-bg-light border badge-skill">Kubernetes (MicroK8s/Talos)</span><span class="badge text-bg-light border badge-skill">Helm</span><span class="badge text-bg-light border badge-skill">Rook‑Ceph</span><span class="badge text-bg-light border badge-skill">CloudNativePG</span><span class="badge text-bg-light border badge-skill">MetalLB</span><span class="badge text-bg-light border badge-skill">Cilium</span><span class="badge text-bg-light border badge-skill">NGINX Ingress</span><span class="badge text-bg-light border badge-skill">Velero (Kopia/Restic)</span><span class="badge text-bg-light border badge-skill">GitOps‑ready Helm workflows</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">CI/CD & Automation</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">Bitbucket Pipelines</span><span class="badge text-bg-light border badge-skill">GitHub Actions</span><span class="badge text-bg-light border badge-skill">Azure DevOps</span><span class="badge text-bg-light border badge-skill">TeamCity</span><span class="badge text-bg-light border badge-skill">AWX/Ansible</span><span class="badge text-bg-light border badge-skill">Bash/PowerShell</span><span class="badge text-bg-light border badge-skill">Android signing (keystore/base64)</span><span class="badge text-bg-light border badge-skill">Release pipelines</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">AI & Dev Tooling</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">OpenAI API</span><span class="badge text-bg-light border badge-skill">Semantic Kernel</span><span class="badge text-bg-light border badge-skill">NCalc/NCalcAsync</span><span class="badge text-bg-light border badge-skill">VSIX code analysis</span><span class="badge text-bg-light border badge-skill">Custom toolchains</span>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <div class="fw-semibold mb-1">Ecosystem & Platforms</div>
+              <div>
+                <span class="badge text-bg-light border badge-skill">Visual Studio</span><span class="badge text-bg-light border badge-skill">VS Code</span><span class="badge text-bg-light border badge-skill">ReSharper</span><span class="badge text-bg-light border badge-skill">Postman</span><span class="badge text-bg-light border badge-skill">Android Studio</span><span class="badge text-bg-light border badge-skill">Git (GitHub/Bitbucket)</span><span class="badge text-bg-light border badge-skill">Jira</span><span class="badge text-bg-light border badge-skill">Scrum/Agile</span><span class="badge text-bg-light border badge-skill">Google Play Console</span><span class="badge text-bg-light border badge-skill">App Store Connect</span><span class="badge text-bg-light border badge-skill">Huawei AppGallery</span><span class="badge text-bg-light border badge-skill">Wix Velo</span><span class="badge text-bg-light border badge-skill">WordPress (Avada)</span><span class="badge text-bg-light border badge-skill">Turborepo</span>
+              </div>
+            </div>
+
+            <div class="mb-2">
+              <div class="fw-semibold mb-1">Websites & Profiles</div>
+              <ul class="list-unstyled small mb-0">
+                <li><a class="link-primary" href="https://za.linkedin.com/in/terence-pillay-10289968">LinkedIn</a></li>
+                <li><a class="link-primary" href="https://github.com/terencenrth">GitHub: terencenrth</a></li>
+                <li><a class="link-primary" href="http://forums.asp.net/t/2056940.aspx?cascading+dropdowns+alternate+method+for+beginners">ASP.NET Forum: Cascading Dropdowns</a></li>
+              </ul>
+            </div>
+
+            <div class="mt-3">
+              <div class="fw-semibold mb-1">Languages</div>
+              <span class="badge text-bg-light border badge-skill">English — Native</span>
+            </div>
           </div>
-          <div class="meta">11/2017 – 03/2018</div>
-        </div>
-        <ul>
-          <li>Delivered secure integrations between Sync System and client platforms; owned component testing and defect resolution.</li>
-          <li>Drove Agile collaboration and researched new approaches to improve throughput and reliability.</li>
-        </ul>
-
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px">
-          <div>
-            <h3>IT Developer — Telesacomms (PTY) LTD</h3>
-            <div class="muted">Musgrave, KwaZulu‑Natal</div>
-          </div>
-          <div class="meta">12/2015 – 11/2017</div>
-        </div>
-        <ul>
-          <li>Built internal/customer applications, collaborated on requirements, and shipped maintainable releases.</li>
-          <li>Improved performance and reliability through profiling, refactoring and test automation.</li>
-        </ul>
-
-        <h2>Education</h2>
-        <div style="display:flex; justify-content:space-between; gap:12px">
-          <div>
-            <strong>Diploma of IT (Software Development)</strong><br>
-            <span class="muted">Durban University of Technology, Durban, KwaZulu‑Natal</span>
-          </div>
-          <div class="meta">01/2013 – 12/2015</div>
-        </div>
-        <div style="height:8px"></div>
-        <div style="display:flex; justify-content:space-between; gap:12px">
-          <div>
-            <strong>Higher National Diploma · IT</strong><br>
-            <span class="muted">Glenhills Secondary, KwaDukuza, KwaZulu‑Natal</span>
-          </div>
-          <div class="meta">12/2012</div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>Skills (updated)</h2>
-
-        <div class="skills-cat">
-          <h4>Languages</h4>
-          <div class="pills">
-            <span class="pill">C#</span><span class="pill">TypeScript/JavaScript</span><span class="pill">Java</span>
-            <span class="pill">Python</span><span class="pill">PHP</span><span class="pill">SQL/T‑SQL</span>
-            <span class="pill">PL/pgSQL</span><span class="pill">Bash</span><span class="pill">PowerShell</span>
-            <span class="pill">MQL5</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JSON</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>.NET & Backend</h4>
-          <div class="pills">
-            <span class="pill">.NET 8/6 & Framework</span><span class="pill">ASP.NET Core</span><span class="pill">Web API (REST)</span>
-            <span class="pill">MVC</span><span class="pill">Minimal APIs</span><span class="pill">Windows Services</span>
-            <span class="pill">WPF</span><span class="pill">UWP</span><span class="pill">Entity Framework Core/EF6</span>
-            <span class="pill">CQRS</span><span class="pill">Microservices</span>
-            <span class="pill">Syncfusion PDF</span><span class="pill">MigraDoc</span><span class="pill">WKHTMLTOPDF</span><span class="pill">PuppeteerSharp</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>Identity & Security</h4>
-          <div class="pills">
-            <span class="pill">IdentityServer4</span><span class="pill">OAuth2/OIDC</span><span class="pill">OidcClient</span>
-            <span class="pill">Keycloak</span><span class="pill">Authentik</span><span class="pill">AWS Cognito</span>
-            <span class="pill">JWT/RBAC</span><span class="pill">TLS/Ingress hardening</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>Frontend</h4>
-          <div class="pills">
-            <span class="pill">Angular + Material/CLI</span><span class="pill">React</span><span class="pill">React Native (Expo)</span>
-            <span class="pill">Vue.js</span><span class="pill">Aurelia</span><span class="pill">SAPUI5</span>
-            <span class="pill">jQuery</span><span class="pill">Bootstrap</span><span class="pill">Ajax</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>Mobile & Desktop</h4>
-          <div class="pills">
-            <span class="pill">.NET MAUI</span><span class="pill">Xamarin.Forms</span><span class="pill">Android Studio</span>
-            <span class="pill">Expo/EAS Build</span><span class="pill">AppCenter</span><span class="pill">Play Store (Android 15)</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>APIs & Integrations</h4>
-          <div class="pills">
-            <span class="pill">RESTful APIs</span><span class="pill">tRPC</span><span class="pill">Prisma</span>
-            <span class="pill">SAP integrations</span><span class="pill">Webhooks</span><span class="pill">Postman</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>Data & Databases</h4>
-          <div class="pills">
-            <span class="pill">SQL Server</span><span class="pill">PostgreSQL (CloudNativePG/PITR)</span><span class="pill">SQLite</span>
-            <span class="pill">SSIS/ETL</span><span class="pill">Query tuning</span><span class="pill">SQL Profiler</span><span class="pill">Data modelling</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>Cloud, Containers & Kubernetes</h4>
-          <div class="pills">
-            <span class="pill">Azure</span><span class="pill">AWS</span><span class="pill">S3‑compatible (Linode)</span>
-            <span class="pill">Docker & Compose</span><span class="pill">Kubernetes (MicroK8s/Talos)</span><span class="pill">Helm</span>
-            <span class="pill">Rook‑Ceph</span><span class="pill">CloudNativePG</span><span class="pill">MetalLB</span>
-            <span class="pill">Cilium</span><span class="pill">NGINX Ingress</span><span class="pill">Velero (Kopia/Restic)</span>
-            <span class="pill">GitOps‑ready Helm workflows</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>CI/CD & Automation</h4>
-          <div class="pills">
-            <span class="pill">Bitbucket Pipelines</span><span class="pill">GitHub Actions</span><span class="pill">Azure DevOps</span>
-            <span class="pill">TeamCity</span><span class="pill">AWX/Ansible</span><span class="pill">Bash/PowerShell</span>
-            <span class="pill">Android signing (keystore/base64)</span><span class="pill">Release pipelines</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>AI & Dev Tooling</h4>
-          <div class="pills">
-            <span class="pill">OpenAI API</span><span class="pill">Semantic Kernel</span><span class="pill">NCalc/NCalcAsync</span>
-            <span class="pill">VSIX code analysis</span><span class="pill">Custom toolchains</span>
-          </div>
-        </div>
-
-        <div class="skills-cat">
-          <h4>Ecosystem & Platforms</h4>
-          <div class="pills">
-            <span class="pill">Visual Studio</span><span class="pill">VS Code</span><span class="pill">ReSharper</span><span class="pill">Postman</span><span class="pill">Android Studio</span>
-            <span class="pill">Git (GitHub/Bitbucket)</span><span class="pill">Jira</span><span class="pill">Scrum/Agile</span>
-            <span class="pill">Google Play Console</span><span class="pill">App Store Connect</span><span class="pill">Huawei AppGallery</span>
-            <span class="pill">Wix Velo</span><span class="pill">WordPress (Avada)</span><span class="pill">Turborepo</span>
-          </div>
-        </div>
-
-        <h2>Languages</h2>
-        <p>English — Native</p>
-
-        <h2>Websites & Profiles</h2>
-        <ul class="links-list">
-          <li><a href="https://za.linkedin.com/in/terence-pillay-10289968">LinkedIn</a></li>
-          <li><a href="https://github.com/terencenrth">GitHub: terencenrth</a></li>
-          <li><a href="http://forums.asp.net/t/2056940.aspx?cascading+dropdowns+alternate+method+for+beginners">ASP.NET Forum: Cascading Dropdowns</a></li>
-        </ul>
-      </section>
+        </section>
+      </div>
     </div>
 
-    <section class="card">
-      <h2>Community & Projects</h2>
-      <ul>
-        <li>YouTube technical content creator.</li>
-        <li>Apps: Bible Quotes; Unbelievable Facts; URL to PDF — Google Play / Microsoft Store.</li>
-        <li>Forum articles: MVC 5 passing several models; cascading dropdown techniques.</li>
-      </ul>
-      <p class="small muted">References available on request · Updated 2025</p>
+    <!-- Community -->
+    <section class="card shadow-sm my-3">
+      <div class="card-body">
+        <h2 class="h6 text-uppercase text-body-secondary section-title mb-2">Community & Projects</h2>
+        <ul class="mb-2">
+          <li>YouTube technical content creator.</li>
+          <li>Apps: Bible Quotes; Unbelievable Facts; URL to PDF — Google Play / Microsoft Store.</li>
+          <li>Forum articles: MVC 5 passing several models; cascading dropdown techniques.</li>
+        </ul>
+        <div class="small text-secondary">References available on request · Updated 2025</div>
+      </div>
     </section>
+
+    <div class="text-center my-3 no-print">
+      <a class="btn btn-primary px-4" href="#" onclick="window.print()">Print / Save as PDF</a>
+    </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
